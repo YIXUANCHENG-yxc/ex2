@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Table with Images and Text</title>
+    <title>Colored Table with Images and Text</title>
     <style>
         table {
             width: 100%;
@@ -14,27 +14,35 @@
             padding: 8px;
         }
         img {
-            width: 100px; /* You can adjust the size as needed */
-            height: auto;
+            width: 100px; /* Adjust size as needed */
+            height: 100px;
+            padding: 10px; /* Adds space around the image inside the cell */
         }
+        /* Specific colors for text and image backgrounds */
+        .red-background { background-color: red; }
+        .blue-background { background-color: blue; }
+        .green-background { background-color: green; }
+        .yellow-text { color: yellow; }
+        .white-text { color: white; }
+        .black-text { color: black; }
     </style>
 </head>
 <body>
     <table>
         <tr>
-            <td><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
-            <td>Text 1</td>
-            <td><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
+            <td class="red-background"><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
+            <td class="blue-background white-text">Text 1</td>
+            <td class="green-background"><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
         </tr>
         <tr>
-            <td>Text 2</td>
-            <td><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
-            <td>Text 3</td>
+            <td class="blue-background black-text">Text 2</td>
+            <td class="green-background"><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
+            <td class="red-background yellow-text">Text 3</td>
         </tr>
         <tr>
-            <td><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
-            <td>Text 4</td>
-            <td><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
+            <td class="green-background"><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
+            <td class="red-background white-text">Text 4</td>
+            <td class="blue-background"><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
         </tr>
     </table>
 </body>
