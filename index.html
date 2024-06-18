@@ -1,49 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Colored Table with Images and Text</title>
+    <title>Academic Departments</title>
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 三列 */
+            grid-gap: 10px; /* 格子之间的间隔 */
+            max-width: 600px; /* 最大宽度 */
+            margin: auto; /* 居中显示 */
         }
-        td, th {
-            border: 1px solid black;
-            text-align: center;
-            padding: 8px;
+        .grid-item {
+            background-color: #f0f0f0; /* 背景色 */
+            text-align: center; /* 文本居中 */
+            padding: 20px; /* 内边距 */
+            font-size: 16px; /* 字体大小 */
+            border: 1px solid #ccc; /* 边框 */
         }
-        img {
-            width: 100px; /* Adjust size as needed */
-            height: 100px;
-            padding: 10px; /* Adds space around the image inside the cell */
+        .grid-item img {
+            width: 100%; /* 图像宽度 */
+            max-height: 150px; /* 最大图像高度 */
+            object-fit: contain; /* 保持图像的比例 */
+            margin-bottom: 10px; /* 图片与文字间隔 */
         }
-        /* Specific colors for text and image backgrounds */
-        .red-background { background-color: red; }
-        .blue-background { background-color: blue; }
-        .green-background { background-color: green; }
-        .yellow-text { color: yellow; }
-        .white-text { color: white; }
-        .black-text { color: black; }
     </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <td class="red-background"><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
-            <td class="blue-background white-text">Text 1</td>
-            <td class="green-background"><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
-        </tr>
-        <tr>
-            <td class="blue-background black-text">Text 2</td>
-            <td class="green-background"><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
-            <td class="red-background yellow-text">Text 3</td>
-        </tr>
-        <tr>
-            <td class="green-background"><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
-            <td class="red-background white-text">Text 4</td>
-            <td class="blue-background"><img src="https://via.placeholder.com/100" alt="Placeholder Image"></td>
-        </tr>
-    </table>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="path_to_your_image" alt="College of Business Administration">
+            <p>College of Business Administration</p>
+        </div>
+        <div class="grid-item" style="background-color: #0056b3; color: white;">
+            <p>CREATE.</p>
+        </div>
+        <div class="grid-item">
+            <img src="path_to_your_image" alt="Computer Sciences">
+            <p>Computer Sciences</p>
+        </div>
+        <div class="grid-item" style="background-color: #0056b3; color: white;">
+            <p>IMPACT.</p>
+        </div>
+        <div class="grid-item">
+            <img src="path_to_your_image" alt="Computer Engineering">
+            <p>Computer Engineering</p>
+        </div>
+        <div class="grid-item" style="background-color: #ffc107; color: black;">
+            <p>DRIVE.</p>
+        </div>
+        <div class="grid-item">
+            <img src="path_to_your_image" alt="Image">
+            <p>DISCOVER.</p>
+        </div>
+    </div>
 </body>
 </html>
